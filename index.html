@@ -1,0 +1,2099 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinteza Trading — Global Chemical Trade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<div class="shell">
+
+<!-- NAV -->
+<nav>
+  <div class="logo" onclick="go('home')" style="cursor:pointer">◈&nbsp;SINTE<span class="logo-acc">Z</span>A</div>
+  <div class="nav-pills">
+    <a onclick="go('home')"     id="nl-home"     class="active">Home</a>
+    <a onclick="go('products')" id="nl-products">Products</a>
+    <a onclick="go('about')"    id="nl-about">About</a>
+  </div>
+  <button class="btn-nav nav-cta-desktop" onclick="go('contacts')">Contact Us →</button>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-dropdown" id="nav-dropdown">
+  <a onclick="go('home');closeNavDD()"     id="nld-home"     class="nav-dd-item active">Home</a>
+  <a onclick="go('products');closeNavDD()" id="nld-products" class="nav-dd-item">Products</a>
+  <a onclick="go('about');closeNavDD()"    id="nld-about"    class="nav-dd-item">About</a>
+  <a onclick="go('contacts');closeNavDD()"                   class="nav-dd-item nav-dd-cta">Contact Us →</a>
+</div>
+
+<!-- ═══ HOME ═══ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+
+    <!-- Molecular network canvas -->
+    <canvas id="mol-canvas"></canvas>
+
+    <!-- 3D abstract placeholder -->
+    <div class="hero-3d">
+      <div class="hero-3d-ico">🖼</div>
+      <div class="hero-3d-lbl">Abstract 3D dark fluid metallic sculpture, CGI render, dark navy background</div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">Scroll down</div>
+
+    <!-- Top: tag + brand -->
+    <div class="hero-top">
+      <div class="hero-tag">Trading Limited · Est. 2026</div>
+      <div class="hero-brand">
+        SINTEZA
+      </div>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="hero-bottom">
+      <div>
+        <p class="hero-desc">
+          We craft <strong>precision supply chains</strong> for industrial and specialty chemicals — from verified producers to <strong>45+ markets worldwide.</strong>
+        </p>
+        <div class="hero-btns">
+          <button class="btn-hero-solid" onclick="go('products')">View Products •</button>
+          <button class="btn-hero-outline" onclick="go('contacts')">Contact Us →</button>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="hero-carousel" id="hero-carousel">
+        <div class="hero-carousel-track" id="hero-carousel-track">
+          <!-- Card 1 -->
+          <div class="hero-card hero-card-lg" onclick="go('products')">
+            <div class="hero-card-title">Caprolactam</div>
+            <div class="hero-card-markets-lbl">Markets</div>
+            <div class="hero-card-markets">Asia · Europe · CIS · Middle East</div>
+            <div class="hero-card-photo" style="background-image:url('images/caprolactam-B0wWTG5P.jpg');"></div>
+            <div class="hero-card-cta-hint">Click for full specs →</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="hero-card hero-card-lg" onclick="go('products')">
+            <div class="hero-card-title">Urea</div>
+            <div class="hero-card-markets-lbl">Markets</div>
+            <div class="hero-card-markets">Africa · Middle East · Asia · Europe</div>
+            <div class="hero-card-photo" style="background-image:url('images/urea-CSX_1BLF.jpg');"></div>
+            <div class="hero-card-cta-hint">Click for full specs →</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="hero-card hero-card-lg" onclick="go('products')">
+            <div class="hero-card-title">Ammonium Nitrate</div>
+            <div class="hero-card-markets-lbl">Markets</div>
+            <div class="hero-card-markets">Asia · Africa · Latin America · Europe</div>
+            <div class="hero-card-photo" style="background-image:url('images/ammonium-nitrate-DJHxf2Qg.jpg');"></div>
+            <div class="hero-card-cta-hint">Click for full specs →</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="hero-card hero-card-lg" onclick="go('products')">
+            <div class="hero-card-title">Cyclohexanone</div>
+            <div class="hero-card-markets-lbl">Markets</div>
+            <div class="hero-card-markets">Asia · Europe · Americas</div>
+            <div class="hero-card-photo" style="background-image:url('images/cyclohexanone-B-Q2rjFn.jpg');"></div>
+            <div class="hero-card-cta-hint">Click for full specs →</div>
+          </div>
+          <!-- Card 5 -->
+          <div class="hero-card hero-card-lg" onclick="go('products')">
+            <div class="hero-card-title">Ammonium Sulphate</div>
+            <div class="hero-card-markets-lbl">Markets</div>
+            <div class="hero-card-markets">Asia · Africa · Europe · Americas</div>
+            <div class="hero-card-photo" style="background-image:url('images/ammonium sulphate-SFSsfcoP.jpeg');"></div>
+            <div class="hero-card-cta-hint">Click for full specs →</div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="hero-carousel-controls">
+          <button class="hero-carousel-btn" id="carousel-prev" aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="hero-carousel-indicator">
+            <span class="hero-carousel-cur" id="carousel-cur">01</span>
+            <div class="hero-carousel-bar"><div class="hero-carousel-progress" id="carousel-progress"></div></div>
+            <span class="hero-carousel-total">05</span>
+          </div>
+          <button class="hero-carousel-btn" id="carousel-next" aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION A: FEATURES ═══ -->
+  <section class="features-section">
+    <div class="features-header">
+      <div class="dot-label on-dark mb16">Our Capabilities</div>
+      <div class="t-big" style="color:var(--white);">Trade, simplified<br/>for scale.</div>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- Card 1: Diagnostic Shuffler -->
+      <div class="feat-card">
+        <div class="feat-card-heading">Global Supply Chain</div>
+        <div class="feat-card-desc">5 core chemicals, 45+ markets</div>
+        <div class="shuffler-area" id="shuffler-area">
+          <!-- JS will populate these -->
+        </div>
+      </div>
+
+      <!-- Card 2: Telemetry Typewriter -->
+      <div class="feat-card">
+        <div class="feat-card-heading">Real-Time Market Intelligence</div>
+        <div class="feat-card-desc">Live commodity data, instant analysis</div>
+        <div class="live-label">
+          <div class="live-dot"></div>
+          LIVE FEED
+        </div>
+        <div class="typewriter-area" id="typewriter-area">
+          <span id="tw-text"></span><span class="tw-cursor"></span>
+        </div>
+      </div>
+
+      <!-- Card 3: Cursor Protocol Scheduler -->
+      <div class="feat-card">
+        <div class="feat-card-heading">End-to-End Logistics</div>
+        <div class="feat-card-desc">From allocation to delivery</div>
+        <div class="scheduler-area" id="scheduler-area">
+          <div class="sched-headers">
+            <div class="sched-header">M</div>
+            <div class="sched-header">T</div>
+            <div class="sched-header">W</div>
+            <div class="sched-header">T</div>
+            <div class="sched-header">F</div>
+            <div class="sched-header">S</div>
+            <div class="sched-header">S</div>
+          </div>
+          <div class="sched-row" data-row="0">
+            <div class="sched-cell" data-r="0" data-c="0">1</div>
+            <div class="sched-cell" data-r="0" data-c="1">2</div>
+            <div class="sched-cell" data-r="0" data-c="2">3</div>
+            <div class="sched-cell" data-r="0" data-c="3">4</div>
+            <div class="sched-cell" data-r="0" data-c="4">5</div>
+            <div class="sched-cell" data-r="0" data-c="5">6</div>
+            <div class="sched-cell" data-r="0" data-c="6">7</div>
+          </div>
+          <div class="sched-row" data-row="1">
+            <div class="sched-cell" data-r="1" data-c="0">8</div>
+            <div class="sched-cell" data-r="1" data-c="1">9</div>
+            <div class="sched-cell" data-r="1" data-c="2">10</div>
+            <div class="sched-cell" data-r="1" data-c="3">11</div>
+            <div class="sched-cell" data-r="1" data-c="4">12</div>
+            <div class="sched-cell" data-r="1" data-c="5">13</div>
+            <div class="sched-cell" data-r="1" data-c="6">14</div>
+          </div>
+          <div class="sched-row" data-row="2">
+            <div class="sched-cell" data-r="2" data-c="0">15</div>
+            <div class="sched-cell" data-r="2" data-c="1">16</div>
+            <div class="sched-cell" data-r="2" data-c="2">17</div>
+            <div class="sched-cell" data-r="2" data-c="3">18</div>
+            <div class="sched-cell" data-r="2" data-c="4">19</div>
+            <div class="sched-cell" data-r="2" data-c="5">20</div>
+            <div class="sched-cell" data-r="2" data-c="6">21</div>
+          </div>
+          <div class="sched-row" data-row="3">
+            <div class="sched-cell" data-r="3" data-c="0">22</div>
+            <div class="sched-cell" data-r="3" data-c="1">23</div>
+            <div class="sched-cell" data-r="3" data-c="2">24</div>
+            <div class="sched-cell" data-r="3" data-c="3">25</div>
+            <div class="sched-cell" data-r="3" data-c="4">26</div>
+            <div class="sched-cell" data-r="3" data-c="5">27</div>
+            <div class="sched-cell" data-r="3" data-c="6">28</div>
+          </div>
+          <div class="sched-confirm" id="sched-confirm">CONFIRM SCHEDULE</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SECTION B: PHILOSOPHY ═══ -->
+  <section class="philosophy-section">
+    <div class="philo-header">
+      <div class="philo-header-left">
+        <div class="dot-label on-dark mb32">Our Philosophy</div>
+        <p class="philosophy-line1">"Most commodity traders focus on: transaction volume."</p>
+      </div>
+      <div class="philosophy-line2" id="philosophy-line2">
+        We focus on <span style="color:var(--sky)">precision</span> delivery.
+      </div>
+    </div>
+
+    <div class="proc-cards">
+
+      <div class="proc-card">
+        <div class="proc-card-photo" id="proc-photo-1" style="background-image:url('images/proc-1.jpg')"></div>
+        <div class="proc-card-glass">
+          <div class="proc-card-num">01</div>
+          <div class="proc-card-title">Supplier Sourcing<br/>&amp; Vetting</div>
+          <div class="proc-card-desc">We identify and vet producers across Asia, Europe, and the CIS, ensuring every source meets strict quality and compliance benchmarks before allocation.</div>
+        </div>
+      </div>
+
+      <div class="proc-card">
+        <div class="proc-card-photo" id="proc-photo-2" style="background-image:url('images/proc-2.jpg')"></div>
+        <div class="proc-card-glass">
+          <div class="proc-card-num">02</div>
+          <div class="proc-card-title">Quality Control<br/>&amp; Compliance</div>
+          <div class="proc-card-desc">Third-party lab testing, COA verification, and regulatory compliance across every destination market. No shortcuts, no exceptions.</div>
+        </div>
+      </div>
+
+      <div class="proc-card">
+        <div class="proc-card-photo" id="proc-photo-3" style="background-image:url('images/proc-3.jpg')"></div>
+        <div class="proc-card-glass">
+          <div class="proc-card-num">03</div>
+          <div class="proc-card-title">Logistics<br/>&amp; Documentation</div>
+          <div class="proc-card-desc">End-to-end freight coordination, customs documentation, and real-time shipment tracking from origin gate to destination warehouse.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SECTION E: CTA ═══ -->
+  <div class="cta-section-wrap">
+    <div class="cta-section-v2">
+      <div class="cta-v2-left">
+        <div class="dot-label on-dark mb16">let's connect with us</div>
+        <div class="cta-heading">Ready to trade<br/>at scale?</div>
+        <p class="cta-sub">Connect with our Hong Kong trading desk. Allocations move fast.</p>
+      </div>
+      <div class="cta-v2-card">
+        <div class="cta-v2-photo" style="background-image:url('images/cta-home.jpg')"></div>
+        <div class="cta-v2-card-info">
+          <div class="cta-v2-card-name">Hong Kong Trading Desk</div>
+          <div class="cta-v2-card-sub">Sinteza Trading Limited · Est. 2026</div>
+        </div>
+      </div>
+      <div class="cta-btns cta-v2-btns">
+        <button class="btn-hero-solid" onclick="go('contacts')">Request a Quote →</button>
+        <button class="btn-ghost-w" onclick="go('products')">View Products</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /home -->
+
+<!-- ═══ PRODUCTS ═══ -->
+<div class="page" id="page-products">
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <canvas class="page-hero-canvas" id="prod-canvas"></canvas>
+    <div class="page-hero-content">
+      <div class="dot-label on-dark mb16">Product Catalogue</div>
+      <div class="page-hero-title">5 Core<br/>Products.</div>
+      <p class="page-hero-sub">High-grade raw materials allocated direct from verified producers — Asia, Europe, CIS, Africa, and Latin America.</p>
+      <div class="page-hero-btns">
+        <button class="btn-hero-solid" onclick="go('contacts')">Request a Quote →</button>
+        <button class="btn-hero-outline" onclick="document.getElementById('chem-portfolio').scrollIntoView({behavior:'smooth'})">View Specs ↓</button>
+      </div>
+    </div>
+    <div class="page-hero-stats">
+      <div class="page-stat-card">
+        <div class="page-stat-num">100K+</div>
+        <div class="page-stat-lbl">MT / Year</div>
+      </div>
+      <div class="page-stat-card">
+        <div class="page-stat-num">45+</div>
+        <div class="page-stat-lbl">Active Markets</div>
+      </div>
+      <div class="page-stat-card">
+        <div class="page-stat-num">5</div>
+        <div class="page-stat-lbl">Core Products</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Cards -->
+  <div class="prod-cards-section" id="chem-portfolio">
+    <div class="flex between end wrap g24 mb48">
+      <div>
+        <div class="dot-label on-dark mb16">Product Catalogue</div>
+        <div class="t-big" style="color:var(--white);">Chemical<br/>Portfolio.</div>
+      </div>
+      <button class="btn-ghost-w" onclick="go('contacts')">Request Quote →</button>
+    </div>
+    <div class="prod-cards-grid">
+
+      <div class="prod-card" onclick="openProduct(0)">
+        <div class="hero-card-title">Caprolactam</div>
+        <div class="hero-card-markets-lbl">Markets</div>
+        <div class="hero-card-markets">Asia · Europe · CIS · Middle East</div>
+        <div class="hero-card-photo" style="background-image:url('images/caprolactam-B0wWTG5P.jpg');"></div>
+        <div class="prod-card-reveal">
+          <div class="prod-card-cas">CAS 105-60-2</div>
+          <div class="prod-card-vol">100K+ MT / Year</div>
+          <div class="prod-card-tags-row"><span class="prod-tag">Nylon 6</span><span class="prod-tag">Plastics</span></div>
+          <div class="prod-card-hint">Click for full specs →</div>
+        </div>
+      </div>
+
+      <div class="prod-card" onclick="openProduct(1)">
+        <div class="hero-card-title">Urea</div>
+        <div class="hero-card-markets-lbl">Markets</div>
+        <div class="hero-card-markets">Africa · Middle East · Asia · Europe</div>
+        <div class="hero-card-photo" style="background-image:url('images/urea-CSX_1BLF.jpg');"></div>
+        <div class="prod-card-reveal">
+          <div class="prod-card-cas">Carbamide · 46-0-0</div>
+          <div class="prod-card-vol">150K+ MT / Year</div>
+          <div class="prod-card-tags-row"><span class="prod-tag">Agriculture</span><span class="prod-tag">DEF</span></div>
+          <div class="prod-card-hint">Click for full specs →</div>
+        </div>
+      </div>
+
+      <div class="prod-card" onclick="openProduct(2)">
+        <div class="hero-card-title">Ammonium Nitrate</div>
+        <div class="hero-card-markets-lbl">Markets</div>
+        <div class="hero-card-markets">Asia · Africa · Latin America · Europe</div>
+        <div class="hero-card-photo" style="background-image:url('images/ammonium-nitrate-DJHxf2Qg.jpg');"></div>
+        <div class="prod-card-reveal">
+          <div class="prod-card-cas">IMDG Class 5.1</div>
+          <div class="prod-card-vol">80K+ MT / Year</div>
+          <div class="prod-card-tags-row"><span class="prod-tag">Mining</span><span class="prod-tag">Fertiliser</span></div>
+          <div class="prod-card-hint">Click for full specs →</div>
+        </div>
+      </div>
+
+      <div class="prod-card" onclick="openProduct(3)">
+        <div class="hero-card-title">Cyclohexanone</div>
+        <div class="hero-card-markets-lbl">Markets</div>
+        <div class="hero-card-markets">Asia · Europe · Americas</div>
+        <div class="hero-card-photo" style="background-image:url('images/cyclohexanone-B-Q2rjFn.jpg');"></div>
+        <div class="prod-card-reveal">
+          <div class="prod-card-cas">CAS 108-94-1</div>
+          <div class="prod-card-vol">ISO Tank Loads</div>
+          <div class="prod-card-tags-row"><span class="prod-tag">Solvents</span><span class="prod-tag">Adipic Acid</span></div>
+          <div class="prod-card-hint">Click for full specs →</div>
+        </div>
+      </div>
+
+      <div class="prod-card" onclick="openProduct(4)">
+        <div class="hero-card-title">Ammonium Sulphate</div>
+        <div class="hero-card-markets-lbl">Markets</div>
+        <div class="hero-card-markets">Asia · Africa · Europe · Americas</div>
+        <div class="hero-card-photo" style="background-image:url('images/ammonium sulphate-SFSsfcoP.jpeg');"></div>
+        <div class="prod-card-reveal">
+          <div class="prod-card-cas">21% N · 24% S</div>
+          <div class="prod-card-vol">Granular / Crystalline</div>
+          <div class="prod-card-tags-row"><span class="prod-tag">Agriculture</span><span class="prod-tag">Food</span></div>
+          <div class="prod-card-hint">Click for full specs →</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div><!-- /products -->
+
+<!-- ═══ ABOUT ═══ -->
+<div class="page" id="page-about">
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <canvas class="page-hero-canvas" id="about-canvas"></canvas>
+    <div class="page-hero-content">
+      <div class="dot-label on-dark mb16">About Sinteza · Est. 2026</div>
+      <div class="page-hero-title">Architecting<br/>Global Trade.</div>
+      <p class="page-hero-sub">Precision trading of specialty chemicals from Hong Kong SAR — building the supply chains that power modern industry.</p>
+      <div class="page-hero-btns">
+        <button class="btn-hero-solid" onclick="go('contacts')">Contact the Desk →</button>
+        <button class="btn-hero-outline" onclick="go('products')">View Products</button>
+      </div>
+    </div>
+    <div class="page-hero-stats">
+      <div class="page-stat-card">
+        <div class="page-stat-num">$120M+</div>
+        <div class="page-stat-lbl">Year 1 Target</div>
+      </div>
+      <div class="page-stat-card">
+        <div class="page-stat-num">45+</div>
+        <div class="page-stat-lbl">Active Markets</div>
+      </div>
+      <div class="page-stat-card">
+        <div class="page-stat-num" style="color:var(--sky);">HK</div>
+        <div class="page-stat-lbl">Strategic Hub</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Story -->
+  <div style="background:var(--white);padding:100px var(--cx) 160px;">
+    <div class="grid2 g64">
+      <div>
+        <div class="dot-label mb24">Our Story</div>
+        <div class="t-sec mb24">Forged in Hong Kong,<br/>Scaled Globally.</div>
+        <p class="t-body mb16">Incorporated in February 2026 in Hong Kong SAR, Sinteza Trading Limited was established to bridge the expanding gap between prime chemical producers and the rapidly accelerating markets of Asia, Africa, and Europe.</p>
+        <p class="t-body mb24">We are not brokers. We act as principals in every transaction, deploying capital to secure allocations, manage freight risk, and guarantee delivery under the strictest timelines.</p>
+        <button class="btn-blue" onclick="go('contacts')">Get in Touch →</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--navy);border-radius:24px;padding:36px;flex:1;">
+          <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Our Approach</div>
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:rgba(40,114,161,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--sky);">01</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">Principal Trading</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.5;">We deploy our own capital — not a broker's margin.</div></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:rgba(40,114,161,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--sky);">02</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">Direct Producer Access</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.5;">Verified long-term relationships with manufacturers across 3 continents.</div></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:rgba(40,114,161,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--sky);">03</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">End-to-End Logistics</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.5;">ISO tanks, bulk carriers, bagged cargo — full IMDG compliance.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manifesto -->
+  <div class="about-manifesto">
+    <div class="philo-header">
+      <div class="philo-header-left">
+        <div class="dot-label on-dark mb32">Our Philosophy</div>
+        <p class="about-manifesto-small">"Most commodity trading focuses on: transaction volume and margin extraction."</p>
+      </div>
+      <div class="about-manifesto-big" id="about-manifesto-line">
+        We focus on <span class="acc">invincible</span> supply lines.
+      </div>
+    </div>
+
+    <div class="proc-cards">
+
+      <div class="proc-card">
+        <div class="proc-card-photo" style="background-image:url('images/about-proc-1.jpg')"></div>
+        <div class="proc-card-glass">
+          <div class="proc-card-num">01</div>
+          <div class="proc-card-title">Trust Over<br/>Transactions</div>
+          <div class="proc-card-desc">Every relationship we build is anchored in transparency, long-term reliability, and mutual accountability — not just the next deal.</div>
+        </div>
+      </div>
+
+      <div class="proc-card">
+        <div class="proc-card-photo" style="background-image:url('images/about-proc-2.jpg')"></div>
+        <div class="proc-card-glass">
+          <div class="proc-card-num">02</div>
+          <div class="proc-card-title">Compliance Without<br/>Compromise</div>
+          <div class="proc-card-desc">We operate within every regulatory framework across every market we touch. No grey zones, no exceptions.</div>
+        </div>
+      </div>
+
+      <div class="proc-card">
+        <div class="proc-card-photo" style="background-image:url('images/about-proc-3.jpg')"></div>
+        <div class="proc-card-glass">
+          <div class="proc-card-num">03</div>
+          <div class="proc-card-title">Accountability<br/>at Every Step</div>
+          <div class="proc-card-desc">From sourcing to final delivery, we own the outcome. If something moves, we know where it is, who has it, and what happens next.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Leadership -->
+  <div class="s-dark leadership-section">
+    <div class="leadership-inner px">
+      <div class="leadership-left">
+        <div class="dot-label on-dark mb16">Leadership</div>
+        <div class="t-big" style="color:var(--white);">The Mind<br/>Behind The Trade.</div>
+      </div>
+      <div class="leadership-right">
+        <div class="team-card">
+          <div class="flex between center">
+            <span class="t-label" style="color:rgba(255,255,255,.25);font-size:9px;">Director</span>
+            <div class="flex g8">
+              <div style="width:28px;height:28px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,.3);cursor:pointer;transition:border-color .2s;">✉</div>
+              <div style="width:28px;height:28px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,.3);cursor:pointer;transition:border-color .2s;">in</div>
+            </div>
+          </div>
+          <div class="img-ph" style="height:320px;border-radius:16px;overflow:hidden;"><div class="img-ph-ico">🖼</div><div class="img-ph-lbl" style="font-size:9px;">Asian male executive, professional headshot</div><div class="img-ph-sz">400×440px</div></div>
+          <div>
+            <div class="t-card" style="color:var(--white);font-size:17px;">Zhao Jianxin</div>
+            <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.3);margin-top:6px;">Director, Sinteza Trading Limited</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CTA -->
+  <div class="cta-section-wrap">
+    <div class="cta-section-v2">
+      <div class="cta-v2-left">
+        <div class="dot-label on-dark mb16">let's connect with us</div>
+        <div class="cta-heading">Let's build<br/>together.</div>
+        <p class="cta-sub">Connect directly with the Sinteza trading desk. We move fast on allocations.</p>
+      </div>
+      <div class="cta-v2-card">
+        <div class="cta-v2-photo" style="background-image:url('images/cta-about.jpg')"></div>
+        <div class="cta-v2-card-info">
+          <div class="cta-v2-card-name">Sinteza Trading Limited</div>
+          <div class="cta-v2-card-sub">Hong Kong SAR · Global Reach</div>
+        </div>
+      </div>
+      <div class="cta-btns cta-v2-btns">
+        <button class="btn-hero-solid" onclick="go('contacts')">Contact the Desk →</button>
+        <button class="btn-ghost-w" onclick="go('products')">View Products</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /about -->
+
+<!-- ═══ CONTACTS ═══ -->
+<div class="page" id="page-contacts">
+
+  <!-- Page Hero -->
+  <div class="page-hero" style="min-height:75vh;">
+    <canvas class="page-hero-canvas" id="contact-canvas"></canvas>
+    <div class="page-hero-content">
+      <div class="dot-label on-dark mb16">Get in Touch · HK Trading Desk</div>
+      <div class="page-hero-title">Contact<br/>the Desk.</div>
+      <p class="page-hero-sub">Reach out for allocations, logistics, and pricing enquiries. Trading desk available Mon–Fri, 09:00–18:00 HKT.</p>
+    </div>
+  </div>
+
+
+  <!-- Form -->
+  <div class="contact-form-wrap" style="background:#060f19;">
+    <div class="contact-form-box">
+      <!-- Left -->
+      <div class="cfb-left">
+        <div class="dot-label on-dark mb20">Let's Connect</div>
+        <div class="cfb-heading">Send a<br/>Request.</div>
+        <p class="cfb-sub">Reach out for allocations, logistics, and pricing enquiries. We respond within one business day.</p>
+        <div class="cfb-info-list">
+          <a href="mailto:info@sintezatrading.com" class="cfb-info-item" style="text-decoration:none;">
+            <div class="cfb-info-icon">✉</div>
+            <span>info@sintezatrading.com</span>
+          </a>
+          <div class="cfb-info-item">
+            <div class="cfb-info-icon">✆</div>
+            <span>+852 0000 0000</span>
+          </div>
+          <div class="cfb-info-item">
+            <div class="cfb-info-icon">◷</div>
+            <span>Mon–Fri · 09:00–18:00 HKT</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Form Card -->
+      <div class="cfb-right">
+        <form id="contact-form" class="cfb-form">
+          <div class="cfb-fgrid">
+            <div class="cfb-field">
+              <input type="text" name="name" placeholder="Full Name *" required>
+            </div>
+            <div class="cfb-field">
+              <input type="text" name="company" placeholder="Company">
+            </div>
+          </div>
+          <div class="cfb-fgrid">
+            <div class="cfb-field">
+              <input type="email" name="email" placeholder="Email *" required>
+            </div>
+            <div class="cfb-field">
+              <input type="tel" name="phone" placeholder="Phone">
+            </div>
+          </div>
+          <div class="cfb-field cfb-field-select">
+            <input type="hidden" name="product" id="product-val">
+            <div class="cfb-dropdown" id="cfb-dropdown">
+              <div class="cfb-dropdown-trigger" id="cfb-dropdown-trigger">
+                <span id="cfb-dropdown-label">Product of Interest</span>
+                <svg class="cfb-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="#091826" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="cfb-dropdown-menu" id="cfb-dropdown-menu">
+                <div class="cfb-dropdown-item" data-value="Caprolactam">Caprolactam</div>
+                <div class="cfb-dropdown-item" data-value="Urea (Carbamide)">Urea (Carbamide)</div>
+                <div class="cfb-dropdown-item" data-value="Ammonium Nitrate">Ammonium Nitrate</div>
+                <div class="cfb-dropdown-item" data-value="Cyclohexanone & Cyclohexane">Cyclohexanone &amp; Cyclohexane</div>
+                <div class="cfb-dropdown-item" data-value="Ammonium Sulphate">Ammonium Sulphate</div>
+                <div class="cfb-dropdown-item" data-value="Other / Multiple">Other / Multiple</div>
+              </div>
+            </div>
+          </div>
+          <div class="cfb-field">
+            <textarea name="message" rows="4" placeholder="Describe your requirements, volumes, and destination markets..." required></textarea>
+          </div>
+          <button type="submit" class="cfb-submit" id="submit-btn">Submit Enquiry →</button>
+          <div id="form-msg" style="display:none;font-family:'Inter',sans-serif;font-size:13px;text-align:center;padding:12px;border-radius:8px;margin-top:8px;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div><!-- /contacts -->
+
+<!-- FOOTER -->
+<div class="s-navy pad site-footer">
+  <div class="grid4 g40" style="margin-bottom:48px;">
+    <div style="grid-column:span 2;">
+      <div style="font-family:'Montserrat',sans-serif;font-size:clamp(36px,5vw,64px);font-weight:900;color:var(--white);line-height:.88;letter-spacing:-2px;margin-bottom:24px;">SINTEZA<br/>TRADING<br/><span style="color:rgba(255,255,255,.07);">LIMITED</span></div>
+      <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,.25);font-style:italic;margin-bottom:16px;">"Precision. Reliability. Scale."</p>
+      <div class="t-label" style="color:rgba(255,255,255,.15);font-size:10px;">Company No. 79834965 · Hong Kong SAR</div>
+    </div>
+    <div>
+      <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Products</div>
+      <div class="flex col g12">
+        <a class="fl" onclick="go('products')">Caprolactam <span>→</span></a>
+        <a class="fl" onclick="go('products')">Urea (Carbamide) <span>→</span></a>
+        <a class="fl" onclick="go('products')">Ammonium Nitrate <span>→</span></a>
+        <a class="fl" onclick="go('products')">Cyclohexanone <span>→</span></a>
+        <a class="fl" onclick="go('products')">Ammonium Sulphate <span>→</span></a>
+      </div>
+    </div>
+    <div>
+      <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Company</div>
+      <div class="flex col g12">
+        <a class="fl" onclick="go('about')">Who We Are <span>→</span></a>
+        <a class="fl" onclick="go('about')">Our Story <span>→</span></a>
+        <a class="fl" onclick="go('about')">Milestones <span>→</span></a>
+        <a class="fl" onclick="go('about')">Leadership <span>→</span></a>
+        <a class="fl" onclick="go('contacts')">Contact the Desk <span>→</span></a>
+      </div>
+    </div>
+  </div>
+  <hr style="margin-bottom:24px;">
+  <div class="flex between wrap g16">
+    <div class="t-label" style="color:rgba(255,255,255,.15);font-size:10px;">© 2026 Sinteza Trading Limited · All rights reserved.</div>
+    <div class="t-label" style="color:rgba(255,255,255,.15);font-size:10px;">Business Reg. 79834965-000-02-26-9</div>
+  </div>
+</div>
+
+</div><!-- /shell -->
+<div class="toast" id="toast"></div>
+
+<!-- PRODUCT MODAL (global, outside all pages) -->
+<div class="prod-modal-overlay" id="prod-modal">
+  <div class="prod-modal">
+    <button class="prod-modal-close" id="prod-modal-close">✕</button>
+    <div class="prod-modal-photo" id="prod-modal-photo"></div>
+    <div class="prod-modal-body">
+      <div class="prod-modal-num" id="prod-modal-num"></div>
+      <div class="prod-modal-name" id="prod-modal-name"></div>
+      <div class="prod-modal-desc" id="prod-modal-desc"></div>
+      <button class="prod-specs-toggle" id="prod-specs-toggle">
+        Specifications
+        <svg class="prod-specs-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="prod-modal-specs" id="prod-modal-specs"></div>
+      <button class="btn-hero-solid" id="prod-modal-cta">Request a Quote →</button>
+      <div class="prod-modal-nav">
+        <button class="hero-carousel-btn" id="prod-modal-prev" aria-label="Previous">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="hero-carousel-indicator">
+          <span class="hero-carousel-cur" id="prod-modal-cur">01</span>
+          <div class="hero-carousel-bar"><div class="hero-carousel-progress" id="prod-modal-progress"></div></div>
+          <span class="hero-carousel-total">05</span>
+        </div>
+        <button class="hero-carousel-btn" id="prod-modal-next" aria-label="Next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Nav dropdown
+  function closeNavDD() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('nav-burger').classList.remove('open');
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('nav-burger').addEventListener('click', function() {
+      const dd = document.getElementById('nav-dropdown');
+      const navEl = document.querySelector('nav');
+      const rect = navEl.getBoundingClientRect();
+      dd.style.top = (rect.bottom + 8) + 'px';
+      dd.classList.toggle('open');
+      this.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('nav') && !e.target.closest('.nav-dropdown')) closeNavDD();
+    });
+  });
+
+  // Sync dropdown active state with nav pills
+  const _goBase = function(p, pushState) {
+    ['home','products','about'].forEach(x => {
+      const el = document.getElementById('nld-' + x);
+      if (el) el.classList.toggle('active', x === p);
+    });
+  };
+
+  const pages = ['home','products','about','contacts'];
+  function go(p, pushState = true) {
+    pages.forEach(x => {
+      document.getElementById('page-'+x).classList.toggle('active', x===p);
+      const nl = document.getElementById('nl-'+x);
+      if (nl) nl.classList.toggle('active', x===p);
+      const nld = document.getElementById('nld-'+x);
+      if (nld) nld.classList.toggle('active', x===p);
+    });
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    if (pushState) history.pushState({ page: p }, '', '#' + p);
+  }
+  window.addEventListener('popstate', (e) => {
+    const page = (e.state && e.state.page) || 'home';
+    go(page, false);
+  });
+  const PRODUCTS = [
+    {
+      num: '01', name: 'Caprolactam', img: 'images/caprolactam-B0wWTG5P.jpg',
+      desc: 'An essential cyclic amide utilised as an intermediate for Nylon 6 fibres, plastics, and resins. Sourced directly from verified producers in Asia and Europe.',
+      specs: [
+        { l: 'CAS No.', v: '105-60-2' },
+        { l: 'Volume', v: '100K+ MT / Year' },
+        { l: 'Markets', v: 'Asia-Pacific · EU · CIS' },
+        { l: 'Packing', v: '25 KG Bags / Jumbo Bags' },
+        { l: 'Grade', v: 'Industrial / Fibre' },
+        { l: 'Transport', v: 'Bulk / Bagged' },
+      ]
+    },
+    {
+      num: '02', name: 'Urea (Carbamide)', img: 'images/urea-CSX_1BLF.jpg',
+      desc: 'A highly concentrated nitrogenous fertiliser (46% N) essential for robust agricultural yields. Available prilled and granular. Also utilised in DEF (AdBlue) production.',
+      specs: [
+        { l: 'Grade', v: 'Prilled / Granular' },
+        { l: 'Volume', v: '150K+ MT / Year' },
+        { l: 'Markets', v: 'Africa · Middle East · Asia · EU' },
+        { l: 'Nitrogen', v: '46%' },
+        { l: 'Packing', v: 'Bulk / Bagged 50 KG' },
+        { l: 'Use', v: 'Agriculture · DEF · Industrial' },
+      ]
+    },
+    {
+      num: '03', name: 'Ammonium Nitrate', img: 'images/ammonium-nitrate-DJHxf2Qg.jpg',
+      desc: 'Dual-purpose raw material — high-nitrogen fertiliser and energetic component for civil mining. Handled under full IMDG Class 5.1 compliance at every logistics stage.',
+      specs: [
+        { l: 'IMDG Class', v: '5.1 (Oxidiser)' },
+        { l: 'Volume', v: '80K+ MT / Year' },
+        { l: 'Markets', v: 'Asia · Africa · Latin America · EU' },
+        { l: 'Nitrogen', v: '34.4%' },
+        { l: 'Packing', v: 'Prilled · Bulk / Bagged' },
+        { l: 'Use', v: 'Mining · Fertiliser' },
+      ]
+    },
+    {
+      num: '04', name: 'Cyclohexanone', img: 'images/cyclohexanone-B-Q2rjFn.jpg',
+      desc: 'Crucial organic solvent and precursor in the nylon and adipic acid synthesis chain. Transported in ISO tanks under temperature-controlled conditions.',
+      specs: [
+        { l: 'CAS No.', v: '108-94-1' },
+        { l: 'Purity', v: '≥99.5%' },
+        { l: 'Markets', v: 'Asia · Europe · Americas' },
+        { l: 'Transport', v: 'ISO Tank (Temp-Controlled)' },
+        { l: 'Use', v: 'Solvents · Adipic Acid · Nylon' },
+        { l: 'Flash Point', v: '43 °C' },
+      ]
+    },
+    {
+      num: '05', name: 'Ammonium Sulphate', img: "images/ammonium sulphate-SFSsfcoP.jpeg",
+      desc: 'Nitrogen and sulphur-rich inorganic salt — excellent soil acidifying fertiliser for sulphur-deficient regions. Available in granular and crystalline form.',
+      specs: [
+        { l: 'Nitrogen', v: '21%' },
+        { l: 'Sulphur', v: '24%' },
+        { l: 'Markets', v: 'Asia · Africa · Europe · Americas' },
+        { l: 'Packing', v: 'Granular / Crystalline · 50 KG' },
+        { l: 'Use', v: 'Agriculture · Food Additives' },
+        { l: 'Transport', v: 'Bulk / Bagged' },
+      ]
+    },
+  ];
+
+  var _currentProductIdx = 0;
+  var _modalAnimating = false;
+
+  function _setProductContent(i) {
+    const p = PRODUCTS[i];
+    document.getElementById('prod-modal-num').textContent = p.num;
+    document.getElementById('prod-modal-name').textContent = p.name;
+    document.getElementById('prod-modal-desc').textContent = p.desc;
+    document.getElementById('prod-modal-specs').innerHTML = p.specs.map(s =>
+      '<div class="prod-modal-spec"><div class="prod-modal-spec-l">' + s.l + '</div><div class="prod-modal-spec-v">' + s.v + '</div></div>'
+    ).join('');
+    document.getElementById('prod-modal-cur').textContent = String(i + 1).padStart(2, '0');
+    document.getElementById('prod-modal-progress').style.width = ((i + 1) / PRODUCTS.length * 100) + '%';
+    // Reset specs accordion on new product
+    document.getElementById('prod-modal-specs').classList.remove('specs-open');
+    const tog = document.getElementById('prod-specs-toggle');
+    if (tog) tog.classList.remove('open');
+  }
+
+  function openProduct(i, animate) {
+    const isOpen = document.getElementById('prod-modal').classList.contains('open');
+    if (_modalAnimating && isOpen) return;
+
+    if (!isOpen || animate === false) {
+      _currentProductIdx = i;
+      _setProductContent(i);
+      document.getElementById('prod-modal-photo').style.backgroundImage = "url('" + PRODUCTS[i].img + "')";
+      document.getElementById('prod-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    _modalAnimating = true;
+    const photo = document.getElementById('prod-modal-photo');
+    const body  = document.getElementById('prod-modal-body');
+
+    gsap.to([photo, body], {
+      opacity: 0, x: _currentProductIdx < i ? -24 : 24,
+      duration: 0.22, ease: 'power2.in',
+      onComplete: function() {
+        _currentProductIdx = i;
+        _setProductContent(i);
+        photo.style.backgroundImage = "url('" + PRODUCTS[i].img + "')";
+        gsap.fromTo([photo, body],
+          { opacity: 0, x: _currentProductIdx <= i ? 24 : -24 },
+          { opacity: 1, x: 0, duration: 0.32, ease: 'power2.out',
+            onComplete: function() { _modalAnimating = false; }
+          }
+        );
+      }
+    });
+  }
+  function closeProduct() {
+    document.getElementById('prod-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('prod-modal-close').addEventListener('click', closeProduct);
+    document.getElementById('prod-specs-toggle').addEventListener('click', function() {
+      const specs = document.getElementById('prod-modal-specs');
+      const isOpen = specs.classList.toggle('specs-open');
+      this.classList.toggle('open', isOpen);
+    });
+    document.getElementById('prod-modal-cta').addEventListener('click', function() { closeProduct(); go('contacts'); });
+    document.getElementById('prod-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeProduct();
+    });
+    document.getElementById('prod-modal-prev').addEventListener('click', function() {
+      if (!_modalAnimating) openProduct((_currentProductIdx - 1 + PRODUCTS.length) % PRODUCTS.length, true);
+    });
+    document.getElementById('prod-modal-next').addEventListener('click', function() {
+      if (!_modalAnimating) openProduct((_currentProductIdx + 1) % PRODUCTS.length, true);
+    });
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('prod-modal').classList.contains('open')) return;
+      if (e.key === 'ArrowLeft' && !_modalAnimating) openProduct((_currentProductIdx - 1 + PRODUCTS.length) % PRODUCTS.length, true);
+      if (e.key === 'ArrowRight' && !_modalAnimating) openProduct((_currentProductIdx + 1) % PRODUCTS.length, true);
+    });
+
+    // Custom dropdown
+    const dd = document.getElementById('cfb-dropdown');
+    const trigger = document.getElementById('cfb-dropdown-trigger');
+    const menu = document.getElementById('cfb-dropdown-menu');
+    const label = document.getElementById('cfb-dropdown-label');
+    const hiddenInput = document.getElementById('product-val');
+    if (dd && trigger) {
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dd.classList.toggle('open');
+      });
+      menu.querySelectorAll('.cfb-dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+          label.textContent = item.dataset.value;
+          hiddenInput.value = item.dataset.value;
+          trigger.classList.add('selected');
+          menu.querySelectorAll('.cfb-dropdown-item').forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+          dd.classList.remove('open');
+        });
+      });
+      document.addEventListener('click', () => dd.classList.remove('open'));
+    }
+  });
+
+  function toggleAcc(head) {}
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.acc-item').forEach(item => {
+      const head = item.querySelector('.acc-head');
+      if (head) {
+        head.removeAttribute('onclick');
+        const body = head.nextElementSibling;
+        const num  = head.querySelector('.acc-n');
+        const tog  = head.querySelector('.acc-tog');
+        
+        if (body) body.classList.remove('open');
+        if (num) num.classList.remove('on');
+        if (tog) { tog.classList.remove('on'); tog.textContent = '+'; }
+        
+        item.addEventListener('mouseenter', () => {
+          if (body) body.classList.add('open');
+          if (num) num.classList.add('on');
+          if (tog) { tog.classList.add('on'); tog.textContent = '−'; }
+        });
+        item.addEventListener('mouseleave', () => {
+          if (body) body.classList.remove('open');
+          if (num) num.classList.remove('on');
+          if (tog) { tog.classList.remove('on'); tog.textContent = '+'; }
+        });
+      }
+    });
+  });
+  function showToast(msg, err=false) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.style.borderColor = err ? '#ef4444' : 'var(--sky)';
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 4500);
+  }
+  const FORMSPREE_ID = 'YOUR_FORM_ID';
+  document.getElementById('contact-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const msg = document.getElementById('form-msg');
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST', body: new FormData(e.target), headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        msg.style.cssText = 'display:block;background:#e8f2f8;color:#2872A1;border:1px solid #CBDDE9;border-radius:8px;padding:12px;';
+        msg.textContent = '✓ Enquiry sent. We will reply within 24 hours.';
+        e.target.reset(); showToast('✓ Enquiry sent successfully!');
+      } else { throw new Error(); }
+    } catch {
+      msg.style.cssText = 'display:block;background:#FEF2F2;color:#B91C1C;border:1px solid #FECACA;border-radius:8px;padding:12px;';
+      msg.textContent = '✗ Something went wrong. Email us at info@sintezatrading.com';
+      showToast('Failed — please email us directly.', true);
+    } finally { btn.textContent = 'Submit Enquiry →'; btn.disabled = false; }
+  });
+
+  /* ── MOLECULAR NETWORK CANVAS ── */
+  (function () {
+    const canvas = document.getElementById('mol-canvas');
+    const ctx    = canvas.getContext('2d');
+
+    const LABELS   = ['C\u2086H\u2081\u2081NO', 'NH\u2084NO\u2083', 'CH\u2084N\u2082O', '(NH\u2084)\u2082SO\u2084', 'C\u2086H\u2081\u2080O'];
+    const N_NODES  = 55;
+    const CONNECT  = 130;
+    const MAX_SPD  = 0.18;
+
+    let W, H, nodes;
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+
+    function initNodes() {
+      nodes = [];
+      for (let i = 0; i < N_NODES; i++) {
+        const heavy = Math.random() < 0.15;
+        nodes.push({
+          x:     rand(0, W),
+          y:     rand(0, H),
+          vx:    rand(-MAX_SPD, MAX_SPD),
+          vy:    rand(-MAX_SPD, MAX_SPD),
+          r:     heavy ? rand(3.5, 5.5) : rand(1.8, 3.2),
+          heavy,
+          phase: rand(0, Math.PI * 2),
+          label: i < LABELS.length ? LABELS[i] : null
+        });
+      }
+    }
+
+    function resize() {
+      const hero = canvas.parentElement;
+      W = canvas.width  = hero.offsetWidth;
+      H = canvas.height = hero.offsetHeight;
+      initNodes();
+    }
+
+    function draw(t) {
+      ctx.clearRect(0, 0, W, H);
+
+      /* ── edges ── */
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const d  = Math.sqrt(dx * dx + dy * dy);
+          if (d < CONNECT) {
+            const a = 0.18 * (1 - d / CONNECT);
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(180,210,255,${a})`;
+            ctx.lineWidth   = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+
+      /* ── nodes ── */
+      for (const n of nodes) {
+        const pulse = Math.sin(t * 0.001 + n.phase);
+
+        if (n.heavy) {
+          /* outer ring */
+          const r1 = n.r + 10 + pulse * 3;
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, r1, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(120,180,255,${0.08 + 0.04 * pulse})`;
+          ctx.lineWidth   = 1;
+          ctx.stroke();
+          /* inner ring */
+          const r2 = n.r + 5 + pulse * 2;
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, r2, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(120,180,255,${0.12 + 0.03 * pulse})`;
+          ctx.lineWidth   = 1;
+          ctx.stroke();
+        }
+
+        /* core dot */
+        const alpha = 0.35 + 0.45 * (0.5 + 0.5 * pulse);
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(200,220,255,${alpha})`;
+        ctx.fill();
+
+        /* label */
+        if (n.label) {
+          ctx.font         = '9px Courier New';
+          ctx.fillStyle    = 'rgba(150,185,255,0.25)';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(n.label, n.x + n.r + 5, n.y);
+        }
+      }
+
+      /* ── bottom fade overlay ── */
+      const grad = ctx.createLinearGradient(0, H * 0.55, 0, H);
+      grad.addColorStop(0, 'rgba(11,18,32,0)');
+      grad.addColorStop(1, 'rgba(11,18,32,0.65)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      /* ── advance positions ── */
+      for (const n of nodes) {
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < -20)  n.x = W + 20;
+        if (n.x > W + 20) n.x = -20;
+        if (n.y < -20)  n.y = H + 20;
+        if (n.y > H + 20) n.y = -20;
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(draw);
+  })();
+
+  /* ══════════════════════════════════════════
+     NAV SCROLL LISTENER
+  ══════════════════════════════════════════ */
+  (function () {
+    const nav = document.querySelector('nav');
+    function updateNav() {
+      if (window.scrollY > 80) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  })();
+
+  /* ══════════════════════════════════════════
+     HERO PRODUCT CAROUSEL
+  ══════════════════════════════════════════ */
+  (function () {
+    const track    = document.getElementById('hero-carousel-track');
+    const prevBtn  = document.getElementById('carousel-prev');
+    const nextBtn  = document.getElementById('carousel-next');
+    const curEl    = document.getElementById('carousel-cur');
+    const progress = document.getElementById('carousel-progress');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const cards  = Array.from(track.querySelectorAll('.hero-card'));
+    const total  = cards.length;
+    let current  = 0;
+    let animating = false;
+    let autoTimer = null;
+
+    function padTwo(n) { return String(n + 1).padStart(2, '0'); }
+
+    function updateIndicator(idx) {
+      curEl.textContent = padTwo(idx);
+      progress.style.width = ((idx + 1) / total * 100) + '%';
+    }
+
+    function initPositions() {
+      cards.forEach((card, i) => {
+        if (i === 0) {
+          gsap.set(card, { x: 0, scale: 1, opacity: 1, zIndex: 2 });
+        } else {
+          gsap.set(card, { x: 0, scale: 1.08, opacity: 0, zIndex: 1 });
+        }
+      });
+      updateIndicator(0);
+    }
+
+    function goTo(idx, dir) {
+      if (animating || idx === current) return;
+      animating = true;
+
+      const outCard = cards[current];
+      const inCard  = cards[idx];
+
+      // incoming card starts scaled up (zoomed in) and invisible, behind
+      inCard.style.zIndex  = 1;
+      outCard.style.zIndex = 3;
+
+      gsap.set(inCard, { scale: 1.08, opacity: 0 });
+
+      const tl = gsap.timeline({ onComplete() {
+        cards.forEach((c, i) => {
+          if (i !== idx) gsap.set(c, { scale: 1.08, opacity: 0, zIndex: 1 });
+        });
+        inCard.style.zIndex = 2;
+        current = idx;
+        animating = false;
+        updateIndicator(current);
+      }});
+
+      // outgoing: scale down to 0.92 + fade out
+      tl.to(outCard, { scale: 0.92, opacity: 0, duration: 0.5, ease: 'power2.in' }, 0);
+      // incoming: scale from 1.08 to 1 + fade in, starts 0.1s after exit begins
+      tl.to(inCard,  { scale: 1,    opacity: 1, duration: 0.55, ease: 'power2.out' }, 0.1);
+    }
+
+    function next() {
+      goTo((current + 1) % total, 1);
+    }
+    function prev() {
+      goTo((current - 1 + total) % total, -1);
+    }
+
+    let paused = false;
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      if (!paused) autoTimer = setInterval(next, 4500);
+    }
+
+    const carousel = document.getElementById('hero-carousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', () => {
+        paused = true;
+        clearInterval(autoTimer);
+      });
+      carousel.addEventListener('mouseleave', () => {
+        paused = false;
+        resetAuto();
+      });
+    }
+
+    prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+    nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+
+    initPositions();
+    resetAuto();
+  })();
+
+  /* ══════════════════════════════════════════
+     FEATURE CARD 1 — DIAGNOSTIC SHUFFLER
+  ══════════════════════════════════════════ */
+  (function () {
+    const area = document.getElementById('shuffler-area');
+    if (!area) return;
+
+    const products = [
+      { name: 'Caprolactam',     volume: '100,000+ MT/Year', market: 'Asia-Pacific · EU' },
+      { name: 'Urea',            volume: '150,000+ MT/Year', market: 'Africa · Middle East' },
+      { name: 'Ammonium Nitrate',volume: '80,000+ MT/Year',  market: 'Mining · Agriculture' },
+    ];
+
+    // Visual slot params: yOffset (px below center), xOffset, scale, opacity, zIndex
+    const SLOTS = [
+      { dy: -14, dx: 0,  sc: 1,    op: 1,    zi: 10 },  // front  (slightly above center)
+      { dy:  18, dx: 6,  sc: 0.96, op: 0.55, zi: 9  },  // middle
+      { dy:  46, dx: 12, sc: 0.92, op: 0.22, zi: 8  },  // back
+    ];
+
+    // Create 3 persistent card elements
+    const cards = products.map(p => {
+      const el = document.createElement('div');
+      el.className = 'mini-card';
+      el.style.cssText = 'position:absolute;top:50%;left:0;right:0;';
+      el.innerHTML = `
+        <div class="mini-card-product">${p.name}</div>
+        <div class="mini-card-volume">${p.volume}</div>
+        <div style="font-family:'Inter',sans-serif;font-size:11px;color:#90b0c4;margin-top:2px;">${p.market}</div>
+      `;
+      area.appendChild(el);
+      return el;
+    });
+
+    // order[slot] = card index currently in that slot
+    let order = [0, 1, 2];
+
+    function place(cardIdx, slotIdx, animate) {
+      const s = SLOTS[slotIdx];
+      cards[cardIdx].style.zIndex = s.zi;
+      const props = { yPercent: -50, y: s.dy, x: s.dx, scale: s.sc, opacity: s.op };
+      if (animate) {
+        gsap.to(cards[cardIdx], { ...props, duration: 0.62, ease: 'back.out(1.15)' });
+      } else {
+        gsap.set(cards[cardIdx], props);
+      }
+    }
+
+    // Init without animation
+    order.forEach((ci, si) => place(ci, si, false));
+
+    let busy = false;
+
+    function shuffle() {
+      if (busy) return;
+      busy = true;
+
+      const outIdx = order[0];
+
+      // 1. Fly front card up & out
+      gsap.to(cards[outIdx], {
+        yPercent: -50, y: -90, x: -8, scale: 0.86, opacity: 0,
+        duration: 0.38, ease: 'power2.in',
+        onComplete() {
+          // Rotate order: front becomes new back
+          order = [order[1], order[2], order[0]];
+
+          // Animate middle → front, back → middle
+          place(order[0], 0, true);
+          place(order[1], 1, true);
+
+          // Teleport recycled card to below-center, then animate into back slot
+          const backIdx = order[2];
+          cards[backIdx].style.zIndex = SLOTS[2].zi;
+          gsap.set(cards[backIdx], { yPercent: -50, y: 90, x: 12, scale: 0.88, opacity: 0 });
+          gsap.to(cards[backIdx], {
+            yPercent: -50, y: SLOTS[2].dy, x: SLOTS[2].dx,
+            scale: SLOTS[2].sc, opacity: SLOTS[2].op,
+            duration: 0.52, ease: 'power2.out', delay: 0.08,
+            onComplete() { busy = false; }
+          });
+        }
+      });
+    }
+
+    setInterval(shuffle, 3200);
+  })();
+
+  /* ══════════════════════════════════════════
+     FEATURE CARD 2 — TELEMETRY TYPEWRITER
+  ══════════════════════════════════════════ */
+  (function () {
+    const textEl = document.getElementById('tw-text');
+    if (!textEl) return;
+
+    const messages = [
+      '> Caprolactam CFR SE Asia: $1,840/MT ↑2.3%',
+      '> Urea FOB Black Sea: $312/MT — allocation secured',
+      '> Ammonium Nitrate: IMDG docs cleared, vessel ETA T+14',
+      '> New inquiry: 5,000 MT Cyclohexanone, CIF Rotterdam',
+      '> Market alert: Caprolactam tightening in Q3 2026',
+    ];
+
+    let msgIdx  = 0;
+    let charIdx = 0;
+    let lines   = [];
+    let typing  = true;
+    let pauseTimer = null;
+
+    function typeChar() {
+      if (!typing) return;
+      const msg = messages[msgIdx];
+      if (charIdx < msg.length) {
+        charIdx++;
+        const current = msg.slice(0, charIdx);
+        const display = [...lines, current].join('\n');
+        textEl.textContent = display;
+        setTimeout(typeChar, 30 + Math.random() * 20);
+      } else {
+        // Message complete — pause then next
+        typing = false;
+        pauseTimer = setTimeout(() => {
+          lines.push(messages[msgIdx]);
+          // Keep max 4 lines visible
+          if (lines.length > 4) lines.shift();
+          msgIdx  = (msgIdx + 1) % messages.length;
+          charIdx = 0;
+          typing  = true;
+          typeChar();
+        }, 1400);
+      }
+    }
+
+    // Start after a short delay
+    setTimeout(typeChar, 600);
+  })();
+
+  /* ══════════════════════════════════════════
+     FEATURE CARD 3 — CURSOR PROTOCOL SCHEDULER
+  ══════════════════════════════════════════ */
+  (function () {
+    const schedArea = document.getElementById('scheduler-area');
+    if (!schedArea) return;
+
+    const confirmBtn = document.getElementById('sched-confirm');
+    // Sequence of cells to highlight: [row, col]
+    const sequence = [[0,0],[0,2],[0,4],[1,1],[1,3],[2,0],[2,2],[3,4]];
+    let seqIdx = 0;
+    let highlighted = [];
+
+    function clearAll() {
+      schedArea.querySelectorAll('.sched-cell').forEach(c => {
+        c.classList.remove('highlighted','clicked');
+      });
+      if (confirmBtn) {
+        confirmBtn.classList.remove('active','clicked');
+      }
+      highlighted = [];
+    }
+
+    function getCell(r, c) {
+      return schedArea.querySelector(`.sched-cell[data-r="${r}"][data-c="${c}"]`);
+    }
+
+    function clickCell(r, c, cb) {
+      const cell = getCell(r, c);
+      if (!cell) { if(cb) cb(); return; }
+      cell.classList.add('clicked');
+      setTimeout(() => {
+        cell.classList.remove('clicked');
+        cell.classList.add('highlighted');
+        highlighted.push(cell);
+        if (cb) cb();
+      }, 200);
+    }
+
+    function runSequence() {
+      if (seqIdx < sequence.length) {
+        const [r, c] = sequence[seqIdx++];
+        clickCell(r, c, () => {
+          setTimeout(runSequence, 350);
+        });
+      } else {
+        // Click confirm
+        setTimeout(() => {
+          if (confirmBtn) {
+            confirmBtn.classList.add('clicked');
+            setTimeout(() => {
+              confirmBtn.classList.remove('clicked');
+              confirmBtn.classList.add('active');
+              // Reset after pause
+              setTimeout(() => {
+                clearAll();
+                seqIdx = 0;
+                setTimeout(runSequence, 800);
+              }, 2000);
+            }, 200);
+          }
+        }, 400);
+      }
+    }
+
+    // Start scheduler loop
+    setTimeout(runSequence, 1200);
+  })();
+
+  /* ══════════════════════════════════════════
+     PROTOCOL CARD 2 — SCAN CANVAS
+  ══════════════════════════════════════════ */
+  (function () {
+    const canvas = document.getElementById('scan-canvas');
+    if (!canvas) return;
+
+    function setupCanvas() {
+      const parent = canvas.parentElement;
+      const size   = Math.min(parent.offsetWidth, parent.offsetHeight) || 380;
+      canvas.width  = size;
+      canvas.height = size;
+    }
+
+    setupCanvas();
+    window.addEventListener('resize', setupCanvas);
+
+    const ctx = canvas.getContext('2d');
+    const COLS = 12, ROWS = 12;
+    const PADDING = 20;
+    let scanY = 0;
+    let raf;
+
+    function drawGrid() {
+      const W = canvas.width;
+      const H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+
+      const colGap = (W - PADDING * 2) / (COLS - 1);
+      const rowGap = (H - PADDING * 2) / (ROWS - 1);
+
+      // Draw dots
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          const x = PADDING + c * colGap;
+          const y = PADDING + r * rowGap;
+          const dist = Math.abs(y - scanY);
+          const bright = Math.max(0, 1 - dist / 60);
+          const alpha  = 0.12 + bright * 0.5;
+          const radius = 1.5 + bright * 1.5;
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(203,221,233,${alpha})`;
+          ctx.fill();
+        }
+      }
+
+      // Scan line
+      const grad = ctx.createLinearGradient(0, scanY - 30, 0, scanY + 30);
+      grad.addColorStop(0,   'rgba(40,114,161,0)');
+      grad.addColorStop(0.5, 'rgba(40,114,161,0.45)');
+      grad.addColorStop(1,   'rgba(40,114,161,0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, scanY - 30, W, 60);
+
+      // Bright line
+      ctx.beginPath();
+      ctx.moveTo(0, scanY);
+      ctx.lineTo(W, scanY);
+      ctx.strokeStyle = 'rgba(203,221,233,0.6)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      scanY += 1.2;
+      if (scanY > canvas.height + 30) scanY = -30;
+
+      raf = requestAnimationFrame(drawGrid);
+    }
+
+    // Only animate when in viewport
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          if (!raf) drawGrid();
+        } else {
+          cancelAnimationFrame(raf);
+          raf = null;
+        }
+      });
+    }, { threshold: 0.1 });
+
+    obs.observe(canvas);
+  })();
+
+  /* ══════════════════════════════════════════
+     SUB-PAGE CANVAS ANIMATIONS
+  ══════════════════════════════════════════ */
+
+  /* — Products hero: chemical elements field (lazy-start) — */
+  window._startProdCanvas = (function () {
+    const canvas = document.getElementById('prod-canvas');
+    if (!canvas) return function(){};
+    const ctx = canvas.getContext('2d');
+
+    const ELEMS = [
+      { s: 'C',   n: 6  }, { s: 'H',   n: 1  }, { s: 'N',   n: 7  },
+      { s: 'O',   n: 8  }, { s: 'S',   n: 16 }, { s: 'NH₃', n: null },
+      { s: 'NO₃', n: null }, { s: 'SO₄', n: null }, { s: 'C₆',  n: null },
+      { s: 'CH₄', n: null }, { s: 'NH₄', n: null }, { s: 'CO',  n: null },
+    ];
+
+    let raf = null, atoms = [], t = 0;
+
+    function makeAtoms(W, H) {
+      atoms = Array.from({length: 28}, (_, i) => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        el: ELEMS[i % ELEMS.length],
+        alpha: Math.random() * 0.14 + 0.06,
+        phase: Math.random() * Math.PI * 2,
+        sz: Math.random() * 10 + 30
+      }));
+    }
+
+    function draw() {
+      const W = canvas.width, H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+      t += 0.003;
+
+      atoms.forEach(a => {
+        a.x += a.vx; a.y += a.vy;
+        if (a.x < -60)  a.x = W + 60;
+        if (a.x > W+60) a.x = -60;
+        if (a.y < -60)  a.y = H + 60;
+        if (a.y > H+60) a.y = -60;
+      });
+
+      // Bond lines
+      for (let i = 0; i < atoms.length; i++) {
+        for (let j = i + 1; j < atoms.length; j++) {
+          const dx = atoms[i].x - atoms[j].x;
+          const dy = atoms[i].y - atoms[j].y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 180) {
+            ctx.beginPath();
+            ctx.moveTo(atoms[i].x, atoms[i].y);
+            ctx.lineTo(atoms[j].x, atoms[j].y);
+            ctx.strokeStyle = `rgba(40,114,161,${0.1 * (1 - dist/180)})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Element cells
+      atoms.forEach(a => {
+        const pulse = 0.5 + 0.5 * Math.sin(t * 0.9 + a.phase);
+        const al = a.alpha * (0.6 + 0.4 * pulse);
+        const sz = a.sz;
+
+        ctx.strokeStyle = `rgba(203,221,233,${al * 0.5})`;
+        ctx.lineWidth = 0.7;
+        ctx.strokeRect(a.x - sz/2, a.y - sz/2, sz, sz);
+
+        if (a.el.n) {
+          ctx.fillStyle = `rgba(203,221,233,${al * 0.5})`;
+          ctx.font = '500 8px Inter,sans-serif';
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'top';
+          ctx.fillText(a.el.n, a.x - sz/2 + 3, a.y - sz/2 + 3);
+        }
+
+        const isLong = a.el.s.length > 2;
+        ctx.font = `700 ${isLong ? 10 : 15}px Montserrat,sans-serif`;
+        ctx.fillStyle = `rgba(203,221,233,${al})`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(a.el.s, a.x, a.y + (a.el.n ? 3 : 0));
+      });
+
+      // Bottom fade
+      const grad = ctx.createLinearGradient(0, 0, 0, H);
+      grad.addColorStop(0,   'rgba(6,15,25,0)');
+      grad.addColorStop(0.6, 'rgba(6,15,25,0)');
+      grad.addColorStop(1,   'rgba(6,15,25,1)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      raf = requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => {
+      if (canvas.offsetWidth > 0) {
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+    });
+
+    return function start() {
+      if (raf) return; // already running
+      canvas.width  = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      t = 0;
+      makeAtoms(canvas.width, canvas.height);
+      draw();
+    };
+  })();
+
+  /* — About hero: floating molecular network — */
+  (function () {
+    const canvas = document.getElementById('about-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    const N = 55;
+    let atoms = [], t = 0, lastW = 0, lastH = 0;
+
+    function resize() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', () => { resize(); initAtoms(); });
+
+    function initAtoms() {
+      const W = canvas.width || window.innerWidth;
+      const H = canvas.height || window.innerHeight;
+      atoms = Array.from({ length: N }, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        r: 1.5 + Math.random() * 2,
+        phase: Math.random() * Math.PI * 2,
+      }));
+      lastW = W; lastH = H;
+    }
+    initAtoms();
+
+    const BOND = 180;
+    function draw() {
+      const W = canvas.width, H = canvas.height;
+      if (!W || !H) { requestAnimationFrame(draw); return; }
+      // Re-scatter atoms when canvas first gets real dimensions
+      if (W !== lastW || H !== lastH) initAtoms();
+      ctx.clearRect(0, 0, W, H);
+      t += 0.007;
+
+      atoms.forEach(a => {
+        a.x += a.vx; a.y += a.vy;
+        if (a.x < 0 || a.x > W) a.vx *= -1;
+        if (a.y < 0 || a.y > H) a.vy *= -1;
+      });
+
+      // Bonds
+      for (let i = 0; i < atoms.length; i++) {
+        for (let j = i + 1; j < atoms.length; j++) {
+          const dx = atoms[j].x - atoms[i].x, dy = atoms[j].y - atoms[i].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < BOND) {
+            const alpha = (1 - d / BOND) * 0.22;
+            ctx.beginPath(); ctx.moveTo(atoms[i].x, atoms[i].y); ctx.lineTo(atoms[j].x, atoms[j].y);
+            ctx.strokeStyle = `rgba(40,114,161,${alpha})`; ctx.lineWidth = 1; ctx.stroke();
+          }
+        }
+      }
+
+      // Atoms
+      atoms.forEach(a => {
+        const pulse = 0.5 + 0.5 * Math.sin(t * 2.2 + a.phase);
+        const grd = ctx.createRadialGradient(a.x, a.y, 0, a.x, a.y, 14 * pulse);
+        grd.addColorStop(0, `rgba(40,114,161,${0.22 * pulse})`);
+        grd.addColorStop(1, 'rgba(40,114,161,0)');
+        ctx.fillStyle = grd; ctx.fillRect(a.x - 14, a.y - 14, 28, 28);
+        ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(203,221,233,${0.25 + 0.45 * pulse})`; ctx.fill();
+      });
+
+      const grad = ctx.createLinearGradient(0, 0, 0, H);
+      grad.addColorStop(0, 'rgba(9,24,38,0)'); grad.addColorStop(0.6, 'rgba(9,24,38,0)'); grad.addColorStop(1, 'rgba(9,24,38,1)');
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  /* — Contacts hero: hexagonal lattice (graphene) — */
+  (function () {
+    const canvas = document.getElementById('contact-canvas');
+    if (!canvas) return;
+    function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    let lastW = 0, lastH = 0;
+    const ctx = canvas.getContext('2d');
+    let t = 0;
+
+    function hexCorner(cx, cy, r, i) {
+      const angle = (Math.PI / 3) * i - Math.PI / 6;
+      return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+    }
+
+    function draw() {
+      const W = canvas.width, H = canvas.height;
+      if (!W || !H) { requestAnimationFrame(draw); return; }
+      if (W !== lastW || H !== lastH) { lastW = W; lastH = H; }
+      ctx.clearRect(0, 0, W, H);
+      t += 0.004;
+
+      const R = 52;
+      const hexW = R * Math.sqrt(3);
+      const hexH = R * 2;
+      const cols = Math.ceil(W / hexW) + 3;
+      const rows = Math.ceil(H / (hexH * 0.75)) + 3;
+
+      for (let row = -1; row < rows; row++) {
+        for (let col = -1; col < cols; col++) {
+          const cx = col * hexW + (row % 2) * (hexW / 2);
+          const cy = row * hexH * 0.75;
+          const dx = cx - W * 0.6, dy = cy - H * 0.45;
+          const dist = Math.sqrt(dx * dx + dy * dy) / Math.max(W, H);
+          const wave = Math.sin(t * 1.6 - dist * 5.5 + row * 0.3);
+          const alpha = 0.03 + 0.07 * (0.5 + 0.5 * wave);
+
+          // Hex outline
+          ctx.beginPath();
+          for (let i = 0; i < 6; i++) {
+            const [x, y] = hexCorner(cx, cy, R - 2, i);
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          }
+          ctx.closePath();
+          ctx.strokeStyle = `rgba(40,114,161,${alpha})`; ctx.lineWidth = 1; ctx.stroke();
+
+          // Bright fill on peak
+          if (wave > 0.78) {
+            const glow = (wave - 0.78) / 0.22;
+            const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, R);
+            grd.addColorStop(0, `rgba(40,114,161,${0.13 * glow})`);
+            grd.addColorStop(1, 'rgba(40,114,161,0)');
+            ctx.fillStyle = grd; ctx.fill();
+          }
+
+          // Center atom dot
+          ctx.beginPath(); ctx.arc(cx, cy, 1.8, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(203,221,233,${0.06 + 0.1 * (0.5 + 0.5 * wave)})`; ctx.fill();
+        }
+      }
+
+      const grad = ctx.createLinearGradient(0, 0, 0, H);
+      grad.addColorStop(0, 'rgba(9,24,38,0)'); grad.addColorStop(0.6, 'rgba(9,24,38,0)'); grad.addColorStop(1, 'rgba(9,24,38,1)');
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  /* ── GSAP ANIMATIONS ── */
+  (function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const E  = 'power3.out';
+    const E2 = 'power2.out';
+
+    /* helper — exclude hero children */
+    function q(sel, scope) {
+      return gsap.utils.toArray(sel, scope || document).filter(el => !el.closest('.hero'));
+    }
+
+    /* ── Hero entrance timeline (plays on load) ── */
+    function heroEntrance() {
+      const tl = gsap.timeline({ defaults: { ease: E } });
+      tl.from('.hero-tag',   { y: 18, opacity: 0, duration: 0.55 }, 0.15)
+        .from('.hero-brand', { clipPath: 'inset(0 0 100% 0)', duration: 1.0 }, 0.25)
+        .from('.hero-desc',  { y: 18, opacity: 0, duration: 0.6  }, 0.5)
+        .from('.hero-btns',  { y: 18, opacity: 0, duration: 0.6  }, 0.62)
+        .from('.hero-cards .hero-card', {
+          y: 36, opacity: 0, duration: 0.75, stagger: 0.12
+        }, 0.68)
+        .from('.hero-scroll', { opacity: 0, duration: 0.5 }, 1.05);
+    }
+
+    /* ══════════════════════════════════════════
+       PHILOSOPHY WORD-SPLIT REVEAL
+    ══════════════════════════════════════════ */
+    function initPhilosophyReveal() {
+      const line2 = document.getElementById('philosophy-line2');
+      if (!line2) return;
+
+      // Split text into word spans, preserving the sky-colored span
+      const rawHTML = line2.innerHTML;
+      // Parse into tokens: words and the sky span
+      const temp    = document.createElement('div');
+      temp.innerHTML = rawHTML;
+
+      // Collect child nodes and wrap text nodes' words in spans
+      const newNodes = [];
+      temp.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const words = node.textContent.split(/(\s+)/);
+          words.forEach(w => {
+            if (/\S/.test(w)) {
+              const span = document.createElement('span');
+              span.className = 'philo-word';
+              span.textContent = w;
+              newNodes.push(span);
+              newNodes.push(document.createTextNode(' '));
+            } else if (w) {
+              newNodes.push(document.createTextNode(w));
+            }
+          });
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          // Wrap element's text as a word too
+          const wrapper = document.createElement('span');
+          wrapper.className = 'philo-word';
+          wrapper.innerHTML = node.outerHTML;
+          newNodes.push(wrapper);
+          newNodes.push(document.createTextNode(' '));
+        }
+      });
+
+      line2.innerHTML = '';
+      newNodes.forEach(n => line2.appendChild(n));
+
+      const words = line2.querySelectorAll('.philo-word');
+      gsap.set(words, { y: 30, opacity: 0 });
+      gsap.to(words, {
+        y: 0, opacity: 1,
+        duration: 0.7, ease: 'power3.out',
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: line2,
+          start: 'top 80%',
+          once: true
+        }
+      });
+    }
+
+    /* ══════════════════════════════════════════
+       FEATURES CARDS ENTRANCE
+    ══════════════════════════════════════════ */
+    function initFeaturesReveal() {
+      const cards = document.querySelectorAll('.feat-card');
+      if (!cards.length) return;
+      gsap.from(cards, {
+        y: 48, opacity: 0,
+        duration: 0.75, ease: E,
+        stagger: 0.12,
+        scrollTrigger: {
+          trigger: '.features-grid',
+          start: 'top 85%',
+          once: true
+        }
+      });
+    }
+
+    /* ══════════════════════════════════════════
+       PROTOCOL STACKING — CSS sticky + GSAP scrub
+    ══════════════════════════════════════════ */
+    function initProtocolStack() {
+      const cards = ['proto-card-1', 'proto-card-2', 'proto-card-3'].map(id => document.getElementById(id));
+      if (cards.some(c => !c)) return;
+
+      // Kill any old triggers for these cards
+      ScrollTrigger.getAll().forEach(t => {
+        if (cards.includes(t.trigger)) t.kill();
+      });
+
+      // Cards use CSS position:sticky — no GSAP pin needed.
+      // Just scrub the scale-back as the NEXT card slides over this one.
+      cards.forEach((card, i) => {
+        if (i < cards.length - 1) {
+          gsap.fromTo(card,
+            { scale: 1 },
+            {
+              scale: 0.92,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: cards[i + 1],
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+              }
+            }
+          );
+        }
+      });
+
+      ScrollTrigger.refresh();
+    }
+
+    /* ── Scroll animations for a given page scope ── */
+    function initScroll(scope) {
+      ScrollTrigger.getAll().forEach(t => {
+        if (t.trigger && scope.contains(t.trigger)) t.kill();
+      });
+
+      const st = (trigger) => ({ scrollTrigger: { trigger, start: 'top 90%', once: true }, immediateRender: false });
+
+      q('.t-big, .t-sec, .t-hero, .big-stat', scope).forEach(el => {
+        gsap.from(el, { ...st(el), y: 28, opacity: 0, duration: 0.8, ease: E });
+      });
+
+      q('.dot-label', scope).forEach(el => {
+        gsap.from(el, { ...st(el), x: -16, opacity: 0, duration: 0.6, ease: E2 });
+      });
+
+      const grids = new Set(q('.stat-cell', scope).map(el => el.closest('.stat-row')).filter(Boolean));
+      grids.forEach(grid => {
+        gsap.from(grid.querySelectorAll('.stat-cell'), {
+          y: 24, opacity: 0, duration: 0.6, ease: E, stagger: 0.09, immediateRender: false,
+          scrollTrigger: { trigger: grid, start: 'top 90%', once: true }
+        });
+      });
+
+      const cardParents = new Set(q('.team-card', scope).map(el => el.parentElement));
+      cardParents.forEach(parent => {
+        gsap.from(parent.querySelectorAll('.team-card'), {
+          y: 32, opacity: 0, duration: 0.7, ease: E, stagger: 0.1, immediateRender: false,
+          scrollTrigger: { trigger: parent, start: 'top 90%', once: true }
+        });
+      });
+
+      q('.acc-item', scope).forEach((el, i) => {
+        gsap.from(el, {
+          x: -20, opacity: 0, duration: 0.55, ease: E2, immediateRender: false,
+          delay: (i % 6) * 0.06,
+          scrollTrigger: { trigger: el, start: 'top 92%', once: true }
+        });
+      });
+
+      q('.prod-label', scope).forEach((el, i) => {
+        gsap.from(el, { ...st(el), y: 16, opacity: 0, duration: 0.5, ease: E2, delay: i * 0.05 });
+      });
+
+      q('.img-ph, .f-field, .ms', scope).forEach((el, i) => {
+        gsap.from(el, { ...st(el), y: 28, opacity: 0, duration: 0.65, ease: E, delay: i * 0.04 });
+      });
+
+      q('.stat-n', scope).forEach(el => {
+        gsap.from(el, cfg(el, { y: 20, opacity: 0, duration: 0.65, ease: E }));
+      });
+
+      // CTA section entrance
+      const ctaSection = scope.querySelector('.cta-section');
+      if (ctaSection) {
+        gsap.from(ctaSection, {
+          y: 40, opacity: 0, duration: 0.8, ease: E,
+          scrollTrigger: { trigger: ctaSection, start: 'top 88%', once: true }
+        });
+      }
+
+      ScrollTrigger.refresh();
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE HERO ENTRANCE — sub-pages
+    ══════════════════════════════════════════ */
+    function pageHeroEntrance(scope) {
+      const hero = scope.querySelector('.page-hero');
+      if (!hero) return;
+      const tl = gsap.timeline({ defaults: { ease: E } });
+      tl.from(hero.querySelector('.dot-label'),      { x: -20, opacity: 0, duration: 0.5 }, 0.1)
+        .from(hero.querySelector('.page-hero-title'), { y: 32, opacity: 0, duration: 0.9 }, 0.2)
+        .from(hero.querySelector('.page-hero-sub'),   { y: 16, opacity: 0, duration: 0.6 }, 0.45)
+        .from(hero.querySelectorAll('.page-hero-btns, .contact-info-cards'), { y: 16, opacity: 0, duration: 0.6 }, 0.6, '<')
+        .from(hero.querySelectorAll('.page-stat-card'), { y: 28, opacity: 0, duration: 0.65, stagger: 0.1 }, 0.55);
+    }
+
+    /* ══════════════════════════════════════════
+       ABOUT MANIFESTO REVEAL
+    ══════════════════════════════════════════ */
+    function initAboutManifesto() {
+      const el = document.getElementById('about-manifesto-line');
+      if (!el || el.dataset.inited) return;
+      el.dataset.inited = '1';
+      // Word-split (preserve inner span)
+      const html = el.innerHTML;
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      const words = [];
+      tmp.childNodes.forEach(node => {
+        if (node.nodeType === 3) {
+          node.textContent.split(/(\s+)/).forEach(w => {
+            if (w.trim()) { const s = document.createElement('span'); s.className = 'philo-word'; s.textContent = w; words.push(s); }
+            else if (w) { words.push(document.createTextNode(w)); }
+          });
+        } else {
+          node.classList ? node.classList.add('philo-word') : null;
+          words.push(node);
+        }
+      });
+      el.innerHTML = '';
+      words.forEach(w => el.appendChild(w));
+      gsap.from(el.querySelectorAll('.philo-word'), {
+        y: 30, opacity: 0, duration: 0.55, ease: E, stagger: 0.07,
+        scrollTrigger: { trigger: el, start: 'top 82%', once: true }
+      });
+    }
+
+    /* ── Sub-page canvas resize on navigation ── */
+    function resizeSubCanvases() {
+      ['prod-canvas','about-canvas','contact-canvas'].forEach(id => {
+        const c = document.getElementById(id);
+        if (c && c.offsetWidth > 0) {
+          c.width  = c.offsetWidth;
+          c.height = c.offsetHeight;
+        }
+      });
+    }
+
+    /* ── Product cards scroll-in ── */
+    function initProdCards() {
+      const grid = document.querySelector('#page-products .prod-cards-grid');
+      if (!grid) return;
+      const cards = Array.from(grid.querySelectorAll('.prod-card'));
+      gsap.set(cards, { opacity: 0, y: 56, scale: 0.95 });
+      cards.forEach((card, i) => {
+        gsap.to(card, {
+          opacity: 1, y: 0, scale: 1,
+          duration: 0.65, ease: E,
+          delay: i * 0.08,
+          scrollTrigger: { trigger: card, start: 'top 92%', once: true }
+        });
+      });
+      ScrollTrigger.refresh();
+    }
+
+    /* ── SPA hook ── */
+    const _go = window.go;
+    window.go = function (page, pushState = true) {
+      _go(page, pushState);
+      setTimeout(() => {
+        resizeSubCanvases();
+        const pg = document.getElementById('page-' + page);
+        if (pg) {
+          initScroll(pg);
+          ScrollTrigger.refresh();
+          if (page === 'home') {
+            heroEntrance();
+            setTimeout(() => {
+              initPhilosophyReveal();
+              initFeaturesReveal();
+              initProtocolStack();
+            }, 50);
+          } else {
+            pageHeroEntrance(pg);
+            if (page === 'about') {
+              setTimeout(initAboutManifesto, 50);
+            }
+            if (page === 'products') {
+              setTimeout(() => { initProdCards(); if (window._startProdCanvas) _startProdCanvas(); }, 80);
+            }
+          }
+        }
+      }, 120);
+    };
+
+    /* ── Init on load ── */
+    // Navigate to hash if present (e.g. direct link to /#products)
+    (function() {
+      const hash = window.location.hash.replace(/^#/, '') || 'home';
+      const startPage = ['home','products','about','contacts'].includes(hash) ? hash : 'home';
+      if (startPage !== 'home') {
+        go(startPage, false);
+      }
+    })();
+
+    heroEntrance();
+    initScroll(document.getElementById('page-home'));
+    initPhilosophyReveal();
+    initFeaturesReveal();
+    initProtocolStack();
+    // Sub-page animations run only when page becomes active via go() hook
+  })();
+</script>
+</body>
+</html>
