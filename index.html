@@ -16,7 +16,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo" onclick="go('home')" style="cursor:pointer">◈&nbsp;SINTE<span class="logo-acc">Z</span>A</div>
+  <div class="logo" onclick="go('home')" style="cursor:pointer"><img src="images/logo-nav.svg" alt="Sinteza" class="logo-img"></div>
   <div class="nav-pills">
     <a onclick="go('home')"     id="nl-home"     class="active">Home</a>
     <a onclick="go('products')" id="nl-products">Products</a>
@@ -276,7 +276,7 @@
         <div class="cta-heading">Ready to trade<br/>at scale?</div>
         <p class="cta-sub">Connect with our Hong Kong trading desk. Allocations move fast.</p>
       </div>
-      <div class="cta-v2-card">
+      <div class="cta-v2-card" onclick="go('contacts')" role="button">
         <div class="cta-v2-photo" style="background-image:url('images/cta-home.jpg')"></div>
         <div class="cta-v2-card-info">
           <div class="cta-v2-card-name">Hong Kong Trading Desk</div>
@@ -448,7 +448,7 @@
         <button class="btn-blue" onclick="go('contacts')">Get in Touch →</button>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;">
-        <div style="background:var(--navy);border-radius:24px;padding:36px;flex:1;">
+        <div style="background:var(--navy);border-radius:24px;padding:36px;flex:1;display:flex;flex-direction:column;justify-content:center;">
           <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Our Approach</div>
           <div style="display:flex;flex-direction:column;gap:20px;">
             <div style="display:flex;gap:16px;align-items:flex-start;">
@@ -518,22 +518,54 @@
     <div class="leadership-inner px">
       <div class="leadership-left">
         <div class="dot-label on-dark mb16">Leadership</div>
-        <div class="t-big" style="color:var(--white);">The Mind<br/>Behind The Trade.</div>
+        <div class="t-big" style="color:var(--white);">Minds<br/>Behind The Trade.</div>
       </div>
       <div class="leadership-right">
-        <div class="team-card">
-          <div class="flex between center">
-            <span class="t-label" style="color:rgba(255,255,255,.25);font-size:9px;">Director</span>
-            <div class="flex g8">
-              <div style="width:28px;height:28px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,.3);cursor:pointer;transition:border-color .2s;">✉</div>
-              <div style="width:28px;height:28px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,.3);cursor:pointer;transition:border-color .2s;">in</div>
+        <div class="team-carousel">
+          <!-- Card 1 -->
+          <div class="team-card team-carousel-card active">
+            <div class="flex between center">
+              <span class="t-label tc-role" style="font-size:9px;">Board Member</span>
+              <div class="flex g8">
+                <a href="mailto:info@sintezatrading.com" class="tc-icon" title="Email">✉</a>
+                <a href="https://wa.me/85200000000" target="_blank" rel="noopener" class="tc-icon" title="WhatsApp">✆</a>
+              </div>
+            </div>
+            <div class="team-card-photo" style="background-image:url('images/team-ljubisa.jpg')"></div>
+            <div>
+              <div class="t-card tc-name" style="font-size:17px;">Stevanovic Ljubisa</div>
+              <div class="tc-sub">Board Member, Sinteza Trading Limited</div>
             </div>
           </div>
-          <div class="img-ph" style="height:320px;border-radius:16px;overflow:hidden;"><div class="img-ph-ico">🖼</div><div class="img-ph-lbl" style="font-size:9px;">Asian male executive, professional headshot</div><div class="img-ph-sz">400×440px</div></div>
-          <div>
-            <div class="t-card" style="color:var(--white);font-size:17px;">Zhao Jianxin</div>
-            <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.3);margin-top:6px;">Director, Sinteza Trading Limited</div>
+          <!-- Card 2 -->
+          <div class="team-card team-carousel-card">
+            <div class="flex between center">
+              <span class="t-label tc-role" style="font-size:9px;">Board Member</span>
+              <div class="flex g8">
+                <a href="mailto:info@sintezatrading.com" class="tc-icon" title="Email">✉</a>
+                <a href="https://wa.me/85200000000" target="_blank" rel="noopener" class="tc-icon" title="WhatsApp">✆</a>
+              </div>
+            </div>
+            <div class="team-card-photo" style="background-image:url('images/team-madhavan.jpg')"></div>
+            <div>
+              <div class="t-card tc-name" style="font-size:17px;">Madhavan Sabareesh</div>
+              <div class="tc-sub">Board Member, Sinteza Trading Limited</div>
+            </div>
           </div>
+        </div>
+        <!-- Carousel controls -->
+        <div class="team-carousel-controls">
+          <button class="hero-carousel-btn" id="team-prev">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="hero-carousel-indicator">
+            <span class="hero-carousel-cur" id="team-cur">01</span>
+            <div class="hero-carousel-bar"><div class="hero-carousel-progress" id="team-progress" style="width:50%"></div></div>
+            <span class="hero-carousel-total">02</span>
+          </div>
+          <button class="hero-carousel-btn" id="team-next">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -548,7 +580,7 @@
         <div class="cta-heading">Let's build<br/>together.</div>
         <p class="cta-sub">Connect directly with the Sinteza trading desk. We move fast on allocations.</p>
       </div>
-      <div class="cta-v2-card">
+      <div class="cta-v2-card" onclick="go('contacts')" role="button">
         <div class="cta-v2-photo" style="background-image:url('images/cta-about.jpg')"></div>
         <div class="cta-v2-card-info">
           <div class="cta-v2-card-name">Sinteza Trading Limited</div>
@@ -574,12 +606,16 @@
       <div class="dot-label on-dark mb16">Get in Touch · HK Trading Desk</div>
       <div class="page-hero-title">Contact<br/>the Desk.</div>
       <p class="page-hero-sub">Reach out for allocations, logistics, and pricing enquiries. Trading desk available Mon–Fri, 09:00–18:00 HKT.</p>
+      <div class="hero-btns" style="margin-top:32px;">
+        <button class="btn-hero-solid" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Contact the Desk →</button>
+        <button class="btn-hero-outline" onclick="go('products')">View Products</button>
+      </div>
     </div>
   </div>
 
 
   <!-- Form -->
-  <div class="contact-form-wrap" style="background:#060f19;">
+  <div id="contact-form" class="contact-form-wrap" style="background:#060f19;">
     <div class="contact-form-box">
       <!-- Left -->
       <div class="cfb-left">
@@ -654,32 +690,28 @@
 <div class="s-navy pad site-footer">
   <div class="grid4 g40" style="margin-bottom:48px;">
     <div style="grid-column:span 2;">
-      <div style="font-family:'Montserrat',sans-serif;font-size:clamp(36px,5vw,64px);font-weight:900;color:var(--white);line-height:.88;letter-spacing:-2px;margin-bottom:24px;">SINTEZA<br/>TRADING<br/><span style="color:rgba(255,255,255,.07);">LIMITED</span></div>
+      <img src="images/logo-footer.svg" alt="Sinteza Trading Limited" class="logo-footer-img">
       <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,.25);font-style:italic;margin-bottom:16px;">"Precision. Reliability. Scale."</p>
       <div class="t-label" style="color:rgba(255,255,255,.15);font-size:10px;">Company No. 79834965 · Hong Kong SAR</div>
     </div>
     <div>
-      <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Products</div>
+      <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Company</div>
       <div class="flex col g12">
-        <a class="fl" onclick="go('products')">Caprolactam <span>→</span></a>
-        <a class="fl" onclick="go('products')">Urea (Carbamide) <span>→</span></a>
-        <a class="fl" onclick="go('products')">Ammonium Nitrate <span>→</span></a>
-        <a class="fl" onclick="go('products')">Cyclohexanone <span>→</span></a>
-        <a class="fl" onclick="go('products')">Ammonium Sulphate <span>→</span></a>
+        <a class="fl" onclick="go('home')">Home</a>
+        <a class="fl" onclick="go('products')">Products</a>
+        <a class="fl" onclick="go('about')">About</a>
+        <a class="fl" onclick="go('contacts')">Contact Us</a>
       </div>
     </div>
     <div>
-      <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Company</div>
+      <div class="t-label mb24" style="color:rgba(255,255,255,.25);display:block;">Contact</div>
       <div class="flex col g12">
-        <a class="fl" onclick="go('about')">Who We Are <span>→</span></a>
-        <a class="fl" onclick="go('about')">Our Story <span>→</span></a>
-        <a class="fl" onclick="go('about')">Milestones <span>→</span></a>
-        <a class="fl" onclick="go('about')">Leadership <span>→</span></a>
-        <a class="fl" onclick="go('contacts')">Contact the Desk <span>→</span></a>
+        <a class="fl" href="mailto:info@sintezatrading.com">info@sintezatrading.com</a>
+        <a class="fl" href="https://wa.me/85200000000" target="_blank" rel="noopener">+852 0000 0000</a>
+        <a class="fl" onclick="go('contacts')">Mon–Fri · 09:00–18:00 HKT</a>
       </div>
     </div>
   </div>
-  <hr style="margin-bottom:24px;">
   <div class="flex between wrap g16">
     <div class="t-label" style="color:rgba(255,255,255,.15);font-size:10px;">© 2026 Sinteza Trading Limited · All rights reserved.</div>
     <div class="t-label" style="color:rgba(255,255,255,.15);font-size:10px;">Business Reg. 79834965-000-02-26-9</div>
@@ -740,6 +772,25 @@
       if (!e.target.closest('nav') && !e.target.closest('.nav-dropdown')) closeNavDD();
     });
   });
+
+  // Team carousel
+  (function() {
+    const cards = document.querySelectorAll('.team-carousel-card');
+    const cur = document.getElementById('team-cur');
+    const progress = document.getElementById('team-progress');
+    let idx = 0;
+    function showCard(n) {
+      cards.forEach(c => c.classList.remove('active'));
+      idx = (n + cards.length) % cards.length;
+      cards[idx].classList.add('active');
+      if (cur) cur.textContent = String(idx + 1).padStart(2, '0');
+      if (progress) progress.style.width = ((idx + 1) / cards.length * 100) + '%';
+    }
+    const prevBtn = document.getElementById('team-prev');
+    const nextBtn = document.getElementById('team-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => showCard(idx - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showCard(idx + 1));
+  })();
 
   // Sync dropdown active state with nav pills
   const _goBase = function(p, pushState) {
@@ -894,6 +945,7 @@
       this.classList.toggle('open', isOpen);
     });
     document.getElementById('prod-modal-cta').addEventListener('click', function() { closeProduct(); go('contacts'); });
+
     document.getElementById('prod-modal').addEventListener('click', function(e) {
       if (e.target === this) closeProduct();
     });
